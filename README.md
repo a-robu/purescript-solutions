@@ -10,7 +10,7 @@ Currently, the solutions of the following chapters are solved.
 
 ## License
 
-The solutions are cloned from [this repository](https://github.com/purescript-contrib/purescript-book) which has the following licence information.
+The problems are cloned from [this repository](https://github.com/purescript-contrib/purescript-book) which has the following licence information.
 
 > Copyright (c) 2014-2017 Phil Freeman.
 > 
