@@ -7,6 +7,7 @@ This repository holds my solutions to [the PureScript book](https://book.purescr
 Currently, the solutions of the following chapters are solved.
 
 * Chapter 2
+* Chapter 3
 
 ## License
 
