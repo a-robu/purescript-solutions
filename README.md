@@ -4,10 +4,10 @@ This repository holds my solutions to [the PureScript book](https://book.purescr
 
 # Solutions
 
-Currently, the solutions of the following chapters are solved.
+Currently, the following chapters have solutions in this repository.
 
-* Chapter 2
-* Chapter 3
+* [Chapter 2](exercises/chapter2/test/MySolutions.purs)
+* [Chapter 3](exercises/chapter3/test/MySolutions.purs)
 
 ## License
 
