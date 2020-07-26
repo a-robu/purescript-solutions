@@ -3,7 +3,6 @@ module Test.Main where
 import Prelude
 import Test.Examples
 import Test.MySolutions
-import Test.NoPeeking.Solutions
 import Data.Array (sort)
 import Data.Maybe (Maybe(..))
 import Data.Path (filename, root)
@@ -18,7 +17,6 @@ main :: Effect Unit
 main =
   runTest do
     runChapterExamples
-    {-  Move this block comment starting point to enable more tests
     suite "Exercise Group - Recursion" do
       test "Exercise - isEven" do
         assert "0 is even"
@@ -42,6 +40,7 @@ main =
         test "[0, 1, 19, 20] has 2" do
           Assert.equal 2
             $ countEven [ 0, 1, 19, 20 ]
+    {-  Move this block comment starting point to enable more tests
     suite "Exercise Group - Maps, Infix Operators, and Filtering" do
       suite "Exercise - squared" do
         test "Do nothing with empty array" do
