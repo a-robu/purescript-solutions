@@ -32,3 +32,8 @@ squared = map \x -> x * x
 
 keepNonNegative :: Array Number -> Array Number
 keepNonNegative = filter \x -> x >= 0.0
+
+infixl 4 filter as <$?>
+
+keepNonNegativeRewrite :: Array Number -> Array Number
+keepNonNegativeRewrite arr = (\x -> x >= 0.0) <$?> arr
