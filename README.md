@@ -8,6 +8,7 @@ Currently, the following chapters have solutions in this repository.
 
 * [Chapter 2](exercises/chapter2/test/MySolutions.purs)
 * [Chapter 3](exercises/chapter3/test/MySolutions.purs)
+* [Chapter 4](exercises/chapter4/test/MySolutions.purs) (partially)
 
 ## License
 
