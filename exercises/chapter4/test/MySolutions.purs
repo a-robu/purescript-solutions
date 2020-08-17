@@ -26,3 +26,9 @@ countEven arr =
 -- Same as countEven, but implemented with existing functions.
 trivialCountEven :: Array Int -> Int
 trivialCountEven arr = length $ filter isEven arr
+
+squared :: Array Number -> Array Number
+squared = map \x -> x * x
+
+keepNonNegative :: Array Number -> Array Number
+keepNonNegative = filter \x -> x >= 0.0
