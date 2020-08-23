@@ -2,11 +2,11 @@ module Test.MySolutions where
 
 import Prelude
 
-import Data.Array (filter, head, tail)
+import Control.MonadZero (guard)
+import Data.Array (filter, head, tail, (..))
 import Data.Foldable (length)
 import Data.Maybe (fromMaybe)
 import Test.Examples (factorsV3)
-import Test.NoPeeking.Solutions (cartesianProduct)
 
 isEven :: Int -> Boolean
 isEven 0 = true
@@ -48,3 +48,11 @@ cartesianProduct first second = do
   a <- first
   b <- second
   pure [ a, b ]
+
+triples :: Int -> Array (Array Int)
+triples n = do
+    a <- 1 .. n
+    b <- a .. n
+    c <- 1 .. n
+    guard $ a * a + b * b == c * c
+    pure [ a, b, c ]
