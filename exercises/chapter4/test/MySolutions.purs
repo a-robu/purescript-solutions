@@ -19,11 +19,11 @@ boolToInt true = 1
 countEven :: Array Int -> Int
 countEven [] = 0
 countEven arr =
-    let
-        this = boolToInt $ isEven $ fromMaybe 0 (head arr)
-        others = countEven $ fromMaybe [] (tail arr)
-    in 
-        this + others
+  let
+    this = boolToInt $ isEven $ fromMaybe 0 (head arr)
+    others = countEven $ fromMaybe [] (tail arr)
+  in 
+    this + others
 
 -- Same as countEven, but implemented with existing functions.
 trivialCountEven :: Array Int -> Int
@@ -51,8 +51,8 @@ cartesianProduct first second = do
 
 triples :: Int -> Array (Array Int)
 triples n = do
-    a <- 1 .. n
-    b <- a .. n
-    c <- 1 .. n
-    guard $ a * a + b * b == c * c
-    pure [ a, b, c ]
+  a <- 1 .. n
+  b <- a .. n
+  c <- 1 .. n
+  guard $ a * a + b * b == c * c
+  pure [ a, b, c ]
