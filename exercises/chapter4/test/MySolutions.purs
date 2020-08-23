@@ -3,9 +3,9 @@ module Test.MySolutions where
 import Prelude
 
 import Control.MonadZero (guard)
-import Data.Array (filter, head, tail, (..))
+import Data.Array (filter, head, tail, (..), (!!), concat)
 import Data.Foldable (length)
-import Data.Maybe (fromMaybe)
+import Data.Maybe (Maybe(Just, Nothing), fromMaybe)
 import Test.Examples (factorsV3)
 
 isEven :: Int -> Boolean
@@ -56,3 +56,10 @@ triples n = do
   c <- 1 .. n
   guard $ a * a + b * b == c * c
   pure [ a, b, c ]
+
+factorizations :: Int -> Array Int
+factorizations n =
+  case factorsV3 n !! 1 of
+    Just [prime, composite] -> concat [factorizations composite, [prime]]
+    Just _ -> [-1] -- this line is here to appease the compiler
+    Nothing -> [n]
