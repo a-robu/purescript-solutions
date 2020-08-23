@@ -5,6 +5,8 @@ import Prelude
 import Data.Array (filter, head, tail)
 import Data.Foldable (length)
 import Data.Maybe (fromMaybe)
+import Test.Examples (factorsV3)
+import Test.NoPeeking.Solutions (cartesianProduct)
 
 isEven :: Int -> Boolean
 isEven 0 = true
@@ -37,3 +39,12 @@ infixl 4 filter as <$?>
 
 keepNonNegativeRewrite :: Array Number -> Array Number
 keepNonNegativeRewrite arr = (\x -> x >= 0.0) <$?> arr
+
+isPrime :: Int -> Boolean
+isPrime n = length (factorsV3 n) == 1
+
+cartesianProduct :: forall a. Array a -> Array a -> Array (Array a)
+cartesianProduct first second = do
+  a <- first
+  b <- second
+  pure [ a, b ]

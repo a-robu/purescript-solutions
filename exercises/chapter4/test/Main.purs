@@ -63,7 +63,6 @@ main =
         test "keepNonNegativeRewrite " do
           Assert.equal [ 0.0, 2.0, 3.0 ]
             $ keepNonNegativeRewrite [ -1.5, -1.0, 0.0, -0.1, 2.0, 3.0, -4.0 ]
-    {-  Move this block comment starting point to enable more tests
     suite "Exercise Group - Flattening, Comprehensions, Do Notation, and Guards" do
       test "Exercise - isPrime" do
         assertFalse "0 is not prime"
@@ -95,6 +94,7 @@ main =
           [ [ "5", "five" ], [ "5", "six" ], [ "6", "five" ], [ "6", "six" ] ]
           [ "5", "6" ]
           [ "five", "six" ]
+    {-  Move this block comment starting point to enable more tests
       suite "Exercise - triples" do
         -- Sorting to allow for any ordering
         test "single element array result" do
